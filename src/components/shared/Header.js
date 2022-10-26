@@ -18,6 +18,11 @@ const authenticatedOptions = (
 				Sign Out
 			</Link>
 		</Nav.Item>
+		<Nav.Item>
+			<Link to='pizzas' style={linkStyle}>
+				Create a Pizza
+			</Link>
+		</Nav.Item>
 	</>
 )
 
