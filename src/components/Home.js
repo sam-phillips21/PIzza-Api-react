@@ -1,12 +1,14 @@
+import PizzaIndex from "./PizzaIndex"
+
 const Home = (props) => {
-	// const { msgAlert, user } = props
-	console.log('props in home', props)
+	const { msgAlert } = props
+	// console.log('props in home', props)
 
 	return (
-		<>
-			<h2>Pizza's Home Page</h2>
-			<h3>Let's Get this Bread</h3>
-		</>
+		<div className='container-md'>
+		<h2>PIZZA: Let's Get this dough</h2>
+		<PizzaIndex msgAlert={msgAlert}/>
+	</div>
 	)
 }
 

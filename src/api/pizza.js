@@ -17,18 +17,14 @@ export const pizzaIndex = (user) => {
     return axios({
         method: 'GET',
         url: apiUrl + '/pizzas',
-        headers: {
-            Authorization: `Token token=${user.token}`,
-        },
+     
     })
 }
 export const pizzaShow = (user, id) => {
     return axios({
         method: 'GET',
         url: apiUrl + '/pizzas/' + id,
-        headers: {
-            Authorization: `Token token=${user.token}`,
-        },
+       
     })
 }
 

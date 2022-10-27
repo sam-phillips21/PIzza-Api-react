@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react' 
 import { pizzaIndex } from '../api/pizza'
 import {Link} from 'react-router-dom'
+
 const PizzaIndex = ({ user, msgAlert }) => {
 
     const [allPizzas, setAllPizzas] = useState([])
