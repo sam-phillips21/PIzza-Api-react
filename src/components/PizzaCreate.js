@@ -12,7 +12,7 @@ const PizzaCreate = ({ user, msgAlert }) => {
 
     const handleChange = (event) => {
         // to keep the values as users input info 
-        // first spread the current pet
+        // first spread the current pizza
         // then comma and modify the key to the value you need
         setPizza({...pizza, [event.target.name]: event.target.value})
     }

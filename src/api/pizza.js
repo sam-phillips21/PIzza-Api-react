@@ -13,3 +13,44 @@ export const pizzaCreate = (data, user) => {
 		},
 	})
 }
+export const pizzaIndex = (user) => {
+    return axios({
+        method: 'GET',
+        url: apiUrl + '/pizzas',
+        headers: {
+            Authorization: `Token token=${user.token}`,
+        },
+    })
+}
+export const pizzaShow = (user, id) => {
+    return axios({
+        method: 'GET',
+        url: apiUrl + '/pizzas/' + id,
+        headers: {
+            Authorization: `Token token=${user.token}`,
+        },
+    })
+}
+
+export const pizzaUpdate = (data, user, id) => {
+    return axios({
+        method: 'PATCH',
+        url: apiUrl + '/pizzas/' + id,
+        data: {
+            pizza: data,
+        },
+        headers: {
+            Authorization: `Token token=${user.token}`,
+        },
+    })
+}
+
+export const pizzaDelete = (user, id) => {
+    return axios({
+        method: 'DELETE',
+        url: apiUrl + '/pizzas/' + id,
+        headers: {
+            Authorization: `Token token=${user.token}`,
+        },
+    })
+}

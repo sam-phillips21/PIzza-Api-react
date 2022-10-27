@@ -4,7 +4,8 @@ const Home = (props) => {
 
 	return (
 		<>
-			<h2>Home Page</h2>
+			<h2>Pizza's Home Page</h2>
+			<h3>Let's Get this Bread</h3>
 		</>
 	)
 }

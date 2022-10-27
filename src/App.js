@@ -13,7 +13,8 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import PizzaCreate from './components/PizzaCreate'
-
+import PizzaIndex from './components/PizzaIndex'
+import PizzaShow from './components/PizzaShow'
 const App = () => {
 
   const [user, setUser] = useState(null)
@@ -70,10 +71,25 @@ const App = () => {
               </RequireAuth>}
           />
 		  <Route
-            path='/pizzas'
+            path='/create'
             element={
               <RequireAuth user={user}>
                 <PizzaCreate msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		       
+		  <Route
+            path='/pizzas'
+            element={
+              <RequireAuth user={user}>
+                <PizzaIndex msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		      <Route
+            path='/pizzas/:id'
+            element={
+              <RequireAuth user={user}>
+                <PizzaShow msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
 				</Routes>
