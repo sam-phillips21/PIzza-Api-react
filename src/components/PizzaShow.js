@@ -80,7 +80,7 @@ if (deleted) navigate('/pizzas')
 			<>
 				<h3>Name: {pizza.name}</h3>
 				<p>Type: {pizza.type}</p>
-				<button onClick={toggleShowUpdate}>Toggle Update</button>
+				<button onClick={toggleShowUpdate}> Update</button>
 				{isUpdateShown && (
 					<PizzaUpdate
 						pizza={pizza}
